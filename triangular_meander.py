@@ -11,9 +11,9 @@ import numpy as np
 heights = [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0]
 travel_feed = 600
 print_feed = 10
-x_width = 70
-y_width = 60
-spacing = 15
+x_width = 50
+y_width = 45
+spacing = 11.25
 extrusion_width = 1.0
 
 g = G()
@@ -22,16 +22,16 @@ for idx in range(len(heights)):
     g.absolute()
     g.feed(travel_feed)
     g.move(Z=heights[idx])
-    if idx % 2 == 0:
-        g.move(-5, 70)
+    if True:
+        #g.move(-5, 70)
         g.move(0,0)
         g.move
         g.relative()
         g.triangular_meander(x_width,y_width,spacing,extrusion_width,travel_feed=travel_feed,print_feed=print_feed,start='LL')
-    else:
-        g.move(-5, -5)
-        g.move(0 , 60)
-        g.relative()
-        g.triangular_meander(x_width,y_width,spacing,extrusion_width,travel_feed=travel_feed,print_feed=print_feed,start='UR')
+    #else:
+     #   g.move(-5, -5)
+     #   g.move(0 , 60)
+     #   g.relative()
+     #   g.triangular_meander(x_width,y_width,spacing,extrusion_width,travel_feed=travel_feed,print_feed=print_feed,start='UR')
 
 g.teardown()
