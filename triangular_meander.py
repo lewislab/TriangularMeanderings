@@ -13,7 +13,7 @@ travel_feed = 600
 print_feed = 10
 x_width = 35
 y_width = 30
-spacing = 15
+spacing = 7.5
 extrusion_width = 0.8
 
 g = G()
