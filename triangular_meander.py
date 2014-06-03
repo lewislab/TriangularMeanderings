@@ -22,16 +22,17 @@ for idx in range(len(heights)):
     g.absolute()
     g.feed(travel_feed)
     g.move(Z=heights[idx])
-    if True:
-        #g.move(-5, 70)
+    if idx % 2 == 0:
+        if idx != 0:
+            g.move(-5, x_width)
         g.move(0,0)
         g.move
         g.relative()
         g.triangular_meander(x_width,y_width,spacing,extrusion_width,travel_feed=travel_feed,print_feed=print_feed,start='LL')
-    #else:
-     #   g.move(-5, -5)
-     #   g.move(0 , 60)
-     #   g.relative()
-     #   g.triangular_meander(x_width,y_width,spacing,extrusion_width,travel_feed=travel_feed,print_feed=print_feed,start='UR')
+    else:
+        g.move(-5, -5)
+        g.move(0 , y_width)
+        g.relative()
+        g.triangular_meander(x_width,y_width,spacing,extrusion_width,travel_feed=travel_feed,print_feed=print_feed,start='UR')
 
 g.teardown()
