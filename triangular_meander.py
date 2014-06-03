@@ -14,7 +14,7 @@ print_feed = 10
 x_width = 35
 y_width = 30
 spacing = 15
-extrusion_width = 2.0
+extrusion_width = 1.0
 
 g = G()
 g.set_home(x=0,y=0)
