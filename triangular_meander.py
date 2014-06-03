@@ -8,7 +8,7 @@
 from mecode import G
 import numpy as np
 
-heights = [0.0, 1.0, 2.0, 3.0]
+heights = [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0]
 travel_feed = 600
 print_feed = 10
 x_width = 35
