@@ -8,13 +8,13 @@
 from mecode import G
 import numpy as np
 
-heights = [0.0, 0.7, 1.4, 2.1]
+heights = [0.0, 1.0, 2.0, 3.0]
 travel_feed = 600
 print_feed = 10
 x_width = 35
 y_width = 30
 spacing = 15
-extrusion_width = 0.0
+extrusion_width = 2.0
 
 g = G()
 g.set_home(x=0,y=0)
