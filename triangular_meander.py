@@ -21,7 +21,7 @@ g.set_home(x=0,y=0)
 for idx in range(len(heights)):
     g.absolute()
     g.feed(travel_feed)
-    g.move(Z=heights[idx])
+    g.move(z=heights[idx])
     if idx % 2 == 0:
         if idx != 0:
             g.move(-5, x_width)
@@ -35,4 +35,5 @@ for idx in range(len(heights)):
         g.relative()
         g.triangular_meander(x_width,y_width,spacing,extrusion_width,travel_feed=travel_feed,print_feed=print_feed,start='UR')
 
+g.view()
 g.teardown()
