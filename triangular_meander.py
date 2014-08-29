@@ -49,10 +49,12 @@ for idx in range(len(heights)):
             g.relative()
             if ct != borders:
                 g.move(x=offset, y=offset)
+            g.feed(print_feed)
             x_rect = major_adj+extrusion_width*ct*2/np.sqrt(2)
             y_rect = y_width+extrusion_width*ct*2/np.sqrt(2)
             g.rect(x=x_rect, y=y_rect, start='LL')
             g.absolute()
+            g.feed(travel_feed)
         if idx != 0:
             g.move(-5, x_width)
         g.move(0,0)
@@ -65,10 +67,12 @@ for idx in range(len(heights)):
             g.relative()
             if ct != borders:
                 g.move(x=offset, y=offset)
+            g.feed(print_feed)
             x_rect = major_adj+extrusion_width*ct*2/np.sqrt(2)
             y_rect = y_width+extrusion_width*ct*2/np.sqrt(2)
             g.rect(x=x_rect, y=y_rect, start='LL')
             g.absolute()
+            g.feed(travel_feed)
         g.move(-5, -5)
         g.move(0 , y_width)
         g.relative()
