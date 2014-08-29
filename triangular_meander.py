@@ -9,7 +9,7 @@ from mecode import G
 import numpy as np
 import math
 
-height = 0.25
+height = 0.2
 start_height = 0.0
 end_height = 4.0
 heights = np.arange(start_height, end_height+height, height)
@@ -18,7 +18,7 @@ print_feed = 10
 x_width = 50
 y_width = 45
 spacing = 11.25
-extrusion_width = 1.0
+extrusion_width = 0.3
 borders = 3
 
 
