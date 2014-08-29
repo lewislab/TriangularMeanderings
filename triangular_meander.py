@@ -15,11 +15,11 @@ end_height = 4.0
 heights = np.arange(start_height, end_height+height, height)
 travel_feed = 600
 print_feed = 10
-x_width = 50
-y_width = 45
-spacing = 11.25
-extrusion_width = 0.3
-borders = 3
+x_width = 20
+y_width = 20
+spacing = 10
+extrusion_width = 0.45
+borders = 5
 
 
 # actual spacing
