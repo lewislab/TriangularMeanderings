@@ -55,8 +55,8 @@ for idx in range(len(heights)):
             g.rect(x=x_rect, y=y_rect, start='LL')
             g.absolute()
             g.feed(travel_feed)
-        if idx != 0:
-            g.move(-5, x_width)
+        #if idx != 0:
+        #    g.move(-5, x_width)
         g.move(0,0)
         g.relative()
         g.triangular_meander(x_width,y_width,spacing,extrusion_width,travel_feed=travel_feed,print_feed=print_feed,start='LL')
@@ -73,12 +73,16 @@ for idx in range(len(heights)):
             g.rect(x=x_rect, y=y_rect, start='LL')
             g.absolute()
             g.feed(travel_feed)
-        g.move(-5, -5)
+        #g.move(-5, -5)
         g.move(0 , y_width)
         g.relative()
         g.triangular_meander(x_width,y_width,spacing,extrusion_width,travel_feed=travel_feed,print_feed=print_feed,start='UR')
-
-g.move(x=x_width+2,y=y_width+2, z=0) # move over and go back to zero
+        g.absolute()
+        g.feed(travel_feed)
+        g.move(-5, y_width+5)
+        g.feed(print_feed)
+g.absolute()
+g.move(x=x_width+10,y=y_width+10, z=0) # move over and go back to zero
 
 
 g.view(backend="matplotlib")
