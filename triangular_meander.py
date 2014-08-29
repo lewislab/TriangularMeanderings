@@ -8,7 +8,10 @@
 from mecode import G
 import numpy as np
 
-heights = [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0]
+height = 0.25
+start_height = 0.0
+end_height = 4.0
+heights = np.arange(start_height, end_height+height, height)
 travel_feed = 600
 print_feed = 10
 x_width = 50
@@ -17,7 +20,7 @@ spacing = 11.25
 extrusion_width = 1.0
 
 g = G()
-g.set_home(x=0,y=0)
+g.set_home(x=0,y=0,z=0)
 for idx in range(len(heights)):
     g.absolute()
     g.feed(travel_feed)
@@ -35,5 +38,8 @@ for idx in range(len(heights)):
         g.relative()
         g.triangular_meander(x_width,y_width,spacing,extrusion_width,travel_feed=travel_feed,print_feed=print_feed,start='UR')
 
-g.view()
+g.move(x=x_width+2,y=y_width+2, z=0) # move over and go back to zero
+
+
+g.view(backend="matplotlib")
 g.teardown()
