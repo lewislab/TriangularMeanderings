@@ -5,16 +5,18 @@ import numpy as np
 import math
 g = G()
 
-box_x = 10
-box_y = 10
+box_x = 20
+box_y = 20
 walls = 3
 spacing = 5
 meander_start = 'LL'
-extrusion_width = 0.3
+extrusion_width = 0.2
+
+nozzle = 0.2
 
 start_height = 0
 layer_count = 10
-layer_thick = 0.2
+layer_thick = nozzle/2
 
 def tri_meander_length(g, x, y, spacing, extrusion_width):
     # Calculate tri wave
